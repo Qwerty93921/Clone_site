@@ -2,14 +2,14 @@
     border: 1px solid black;
     height: 100vh;
     width: 100vw;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
 }
 
 .top-border {
     border: 1px solid black;
     width: 100%;
     height: 100px;
-    background-color: green;
+    /* background-color: green; */
     /* flex-direction: row; */
 }
 
@@ -53,4 +53,22 @@
 .button-top:hover {
     background-color: white;
     color: black;
+}
+
+.login-border {
+    border: 1px solid black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+}
+
+.do-not-have-account {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: large;
+    font-weight: 700;
+    /* жирный шрифт от 100 до 900, чем больше число, тем жирнее */
 }

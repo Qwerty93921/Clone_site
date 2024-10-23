@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{% static '/css/style1.css' %}">
 </head>
 <body>
     <div class="large-border">
@@ -12,10 +12,10 @@
             <div class="img-border-top"></div>
             <div class="button-container">
                 <a class="button-top" href="{% url 'home' %}">Home</a>
-                <a class="button-top" href="{% url 'home' %}">Home</a>
-                <a class="button-top" href="{% url 'home' %}">Home</a>
-                <a class="button-top" href="{% url 'home' %}">Home</a>
-                <a class="button-top" href="{% url 'home' %}">Home</a>
+                <a class="button-top" href="{% url 'books' %}">Books</a>
+                <a class="button-top" href="{% url 'cars' %}">Cars</a>
+                <a class="button-top" href="{% url 'home' %}">Smth else</a>
+                <a class="button-top" href="{% url 'login' %}">Enter account</a>
             </div>
         </div>
     </div>

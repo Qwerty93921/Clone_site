@@ -18,10 +18,15 @@ from xml.etree.ElementInclude import include
 
 from django.contrib import admin
 from django.urls import path, include
-from .views import index, home
+from .views import home, base_page_viewer, books_list_viewer, cars_viewer, login_page_viewer, register_page_viewer, auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
-    path('/home/', home, name='home'),
+    path('', base_page_viewer, name='index'),
+    path('home/', home, name='home'),
+    path('books/', books_list_viewer, name='books'),
+    path('cars/', cars_viewer, name='cars'),
+    # path('login/', login_page_viewer, name='login'),
+    path('register/', register_page_viewer, name='register'),
+    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
 ]
