@@ -23,6 +23,9 @@
     /* заставляет изображение покрывать весь элемент. */
     background-position: center;
     background-repeat: no-repeat;
+    font-size: larger;
+    line-height: 50px;
+    padding-left: 30px;
 }
 
 .button-container {
