@@ -2,7 +2,7 @@
     border: 1px solid black;
     height: 100vh;
     width: 100vw;
-    /* background-color: cadetblue; */
+    background-color: cadetblue;
 }
 
 .top-border {
@@ -71,4 +71,12 @@
     font-size: large;
     font-weight: 700;
     /* жирный шрифт от 100 до 900, чем больше число, тем жирнее */
+}
+
+.text-border {
+    border: 1px solid none;
+    /* background-color: cadetblue; */
+    margin-top: 20px;
+    margin-left: 35px;
+    font-size: x-large;
 }

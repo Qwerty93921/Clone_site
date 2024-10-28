@@ -22,6 +22,10 @@ def cars_viewer(request):
     return render(request, 'cars.html', context={})
 
 
+def about_viewer(request):
+    return render(request, 'about.html', context={})
+
+
 def login_page_viewer(request):
     return render(request, 'login.html', context={})
 
