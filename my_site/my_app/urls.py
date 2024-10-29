@@ -18,6 +18,7 @@ from xml.etree.ElementInclude import include
 
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth.views import LogoutView
 from .views import (home, base_page_viewer, books_list_viewer, cars_viewer, login_page_viewer, register_page_viewer, auth_views,
                     about_viewer)
 
@@ -31,4 +32,5 @@ urlpatterns = [
     # path('login/', login_page_viewer, name='login'),
     path('register/', register_page_viewer, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
 ]
