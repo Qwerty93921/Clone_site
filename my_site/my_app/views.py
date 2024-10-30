@@ -36,6 +36,9 @@ def login_page_viewer(request):
 def logout_viewer(request):
     return render(request, 'logout.html', {'user' : User})
 
+
+def user_profile_viewer(request):
+    return render(request, 'user_profile.html', {'user': User})
 # -------------------------------------------------------------------------
 
 # def register_page_viewer(request):

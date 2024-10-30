@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home page</title>
+    <title>My profile</title>
     <link rel="stylesheet" href="{% static '/css/style1.css' %}">
 </head>
 <body>
@@ -17,7 +17,7 @@
                 <a class="button-top" href="{% url 'about' %}">About us</a>
 
                 {% if user.is_authenticated %}
-                    <a class="user-border" href="{% url 'user_account' %}">Привет, {{ user.username }}!</a>
+                    <p class="user-border">Привет, {{ user.username }}!</p>
 
                     <form action="{% url 'logout' %}" method="post" style="display: inline;">
                         {% csrf_token %}
@@ -29,6 +29,9 @@
 
             </div>
         </div>
+
+        <div>Description of user's profile</div>
+
     </div>
 </body>
 </html>
