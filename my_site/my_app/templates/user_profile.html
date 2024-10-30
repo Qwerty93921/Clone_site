@@ -17,7 +17,7 @@
                 <a class="button-top" href="{% url 'about' %}">About us</a>
 
                 {% if user.is_authenticated %}
-                    <p class="user-border">Привет, {{ user.username }}!</p>
+                    <p class="user-border-2">Привет, {{ user.username }}!</p>
 
                     <form action="{% url 'logout' %}" method="post" style="display: inline;">
                         {% csrf_token %}

@@ -104,3 +104,15 @@
     background-color: white;
     color: black;
 }
+
+.user-border-2 {
+    border: 1px solid none;
+    height: 100px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    color: white;
+    background-color: purple;
+}
