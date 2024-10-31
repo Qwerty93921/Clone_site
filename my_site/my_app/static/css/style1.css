@@ -67,7 +67,7 @@
     border: 1px solid black;
     width: 250px;
     height: 100px;
-    background-color: white;
+    background-color: darkslateblue;
     background-image: url('/static/img/pizza_logo1.png');
     background-size: contain;
     /* cover - заставляет изображение покрывать весь элемент(Может обрезать изображение) */
@@ -76,7 +76,7 @@
     background-repeat: no-repeat;
     font-size: larger;
     line-height: 50px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
 }
 
 .button-container {
