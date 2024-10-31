@@ -9,7 +9,7 @@
 <body>
     <div class="large-border">
         <div class="top-border">
-            <div class="img-border-top">Здесь могла быть ваша реклама</div>
+            <div class="img-border-top"></div>
             <div class="button-container">
                 <a class="button-top" href="{% url 'home' %}">Home</a>
                 <a class="button-top" href="{% url 'food' %}">Food</a>
@@ -17,7 +17,7 @@
                 <a class="button-top" href="{% url 'about' %}">About us</a>
 
                 {% if user.is_authenticated %}
-                    <p class="user-border-2">My profile's settings</p>
+                    <div class="user-border-2">My profile's settings</div>
 
                     <form action="{% url 'logout' %}" method="post" style="display: inline;">
                         {% csrf_token %}
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div>Description of user's profile</div>
+        <div class="text-border">Description of user's profile</div>
 
     </div>
 </body>

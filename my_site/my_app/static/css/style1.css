@@ -109,7 +109,6 @@
 }
 
 .button-top:hover {
-    background-color: white;
     color: aqua;
 }
 
@@ -168,11 +167,16 @@
     justify-content: center;
     align-items: center;
     font-size: x-large;
+    padding-left: 30px;
     color: white;
-    background-color: purple;
+    background-image: url('/static/img/telegram_purple.jpg');
+    background-size: contain;
 }
 
 .user-border-2:hover {
-    background-color: white;
-    color: black;
+    color: aqua;
+}
+
+p {
+    color: white;
 }
