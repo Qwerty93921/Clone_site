@@ -17,12 +17,12 @@ def home(request):
     return render(request, 'index.html', context={})
 
 
-def books_list_viewer(request):
-    return render(request, 'books.html', context={})
+def food_viewer(request):
+    return render(request, 'food.html', context={})
 
 
-def cars_viewer(request):
-    return render(request, 'cars.html', context={})
+def drinks_viewer(request):
+    return render(request, 'drinks.html', context={})
 
 
 def about_viewer(request):

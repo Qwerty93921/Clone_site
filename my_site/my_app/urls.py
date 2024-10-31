@@ -19,15 +19,15 @@ from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LogoutView
-from .views import (home, base_page_viewer, books_list_viewer, cars_viewer, login_page_viewer, register_page_viewer, auth_views,
+from .views import (home, base_page_viewer, food_viewer, drinks_viewer, login_page_viewer, register_page_viewer, auth_views,
                     about_viewer, user_profile_viewer)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', base_page_viewer, name='index'),
     path('home/', home, name='home'),
-    path('books/', books_list_viewer, name='books'),
-    path('cars/', cars_viewer, name='cars'),
+    path('food/', food_viewer, name='food'),
+    path('drinks/', drinks_viewer, name='drinks'),
     path('about/', about_viewer, name='about'),
     # path('login/', login_page_viewer, name='login'),
     path('register/', register_page_viewer, name='register'),

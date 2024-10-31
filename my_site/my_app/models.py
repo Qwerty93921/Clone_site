@@ -1,24 +1,26 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+# from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 # Create your models here.
 
-class Book(models.Model):
+class Food(models.Model):
     title = models.CharField(max_length=50, null=False, blank=False)
-    author = models.CharField(max_length=50, null=True, blank=True)
+    # img =
     description = models.TextField(null=True, blank=True)
-    price = models.DecimalField(null=False, blank=False, max_digits=15, decimal_places=2)
+    price = models.DecimalField(null=False, blank=False, max_digits=10, decimal_places=2)
+    amount = models.DecimalField(null=False, blank=False, max_digits=20, decimal_places=0)
     # decimal_places = 2 - значит 2 цифры после запятой, ВСЕГО 10 цифр
 
     def __str__(self):
         return self.title
 
 
-class Car(models.Model):
+class Drink(models.Model):
     title = models.CharField(max_length=50, null=False, blank=False)
-    seller = models.CharField(max_length=50, null=True, blank=True)
+    # img =
     description = models.TextField(null=True, blank=True)
-    price = models.DecimalField(null=False, blank=False, max_digits=20, decimal_places=2)
+    price = models.DecimalField(null=False, blank=False, max_digits=10, decimal_places=2)
+    amount = models.DecimalField(null=False, blank=False, max_digits=20, decimal_places=0)
 
     def __str__(self):
         return self.title
