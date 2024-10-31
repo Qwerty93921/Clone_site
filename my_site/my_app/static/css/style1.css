@@ -4,7 +4,7 @@
     width: 100vw;
     /* background-color: cadetblue; */
     background-image: url('/static/img/telegram_blue.jpg');
-    background-size: contain;
+    background-size: cover;
     
     /* 
     background-size: auto;
