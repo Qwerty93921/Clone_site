@@ -18,7 +18,7 @@
 
     <div class="mb-3">
       <label for="username" class="form-label">Username:</label>
-      <input type="text" class="form-control" id="username" placeholder="Username">
+      <input type="text" class="form-control" id="username" name="username" placeholder="Username">
 <!--      <div class="form-text">We'll never share your email with anyone else.</div>-->
     </div>
 
@@ -29,8 +29,8 @@
 <!--    </div>-->
 
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password:</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+      <label for="password1" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="password1" name="password" placeholder="Enter your password">
     </div>
 
     <div class="mb-3 form-check">
@@ -38,10 +38,7 @@
       <label class="form-check-label" for="exampleCheck1">Remember me</label>
     </div>
 
-    <form action="{% url 'home' %}" method="post" style="display: inline;">
-      {% csrf_token %}
-      <button type="submit" class="btn btn-primary">Login</button>
-    </form>
+    <button type="submit" class="btn btn-primary">Login</button>
 
     <div class="do-not-have-account">Don't have an account?</div>
     <a href="{% url 'register' %}" class="btn btn-primary">Register</a>

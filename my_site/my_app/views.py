@@ -1,11 +1,14 @@
+from http.client import responses
+from wsgiref.util import request_uri
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from django.http import HttpResponse
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from .forms import RegisterForm
 from django.contrib.auth import login, authenticate
+from django.urls import resolve, Resolver404
 
 # Create your views here.
 
@@ -87,3 +90,12 @@ def register_page_viewer(request):
         form = RegisterForm()
 
     return render(request, 'register.html', {'form': form})
+
+
+# def url_checker(request):
+#     try:
+#         # Проверяем, существует ли URL, соответствующий текущему запросу
+#         resolve(request.path)
+#     except Resolver404:
+#         return HttpResponse('Page does not exist')
+#     return None

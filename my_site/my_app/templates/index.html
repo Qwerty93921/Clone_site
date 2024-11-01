@@ -17,7 +17,7 @@
                 <a class="button-top" href="{% url 'about' %}">About us</a>
 
                 {% if user.is_authenticated %}
-                    <a class="user-border" href="{% url 'profile_viewer' %}">My profile, {{ user.username }}!</a>
+                    <div class="user-border-2">You entered as {{ user.username }}</div>
 
                     <form action="{% url 'logout' %}" method="post" style="display: inline;">
                         {% csrf_token %}

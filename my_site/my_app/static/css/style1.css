@@ -151,7 +151,6 @@
     font-size: x-large;
     color: white;
     background-color: purple;
-    cursor: pointer;
 }
 
 .user-border:hover {
@@ -167,7 +166,7 @@
     justify-content: center;
     align-items: center;
     font-size: x-large;
-    padding-left: 30px;
+    padding-left: 10px;
     color: white;
     background-image: url('/static/img/telegram_purple.jpg');
     background-size: contain;
@@ -178,5 +177,9 @@
 }
 
 p {
+    color: white;
+}
+
+h1 {
     color: white;
 }
