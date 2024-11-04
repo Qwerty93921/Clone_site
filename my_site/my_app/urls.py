@@ -32,7 +32,13 @@ urlpatterns = [
     path('about/', about_viewer, name='about'),
     # path('login/', login_page_viewer, name='login'),
     path('register/', register_page_viewer, name='register'),
+    # --------------------------------------------------------------------------------------------------------
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    # views as auth_views
+    # LoginView - это класс
+    # as_view() - это метод
+    # Метод as_view() создает представление на основе этого класса, позволяя нам настраивать его поведение.
+    # --------------------------------------------------------------------------------------------------------
     # path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('logout/', logout_viewer, name='logout'),
     # path('my_profile/', user_profile_viewer, name='profile_viewer'),
