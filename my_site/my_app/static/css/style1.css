@@ -113,7 +113,7 @@
 }
 
 .login-border {
-    border: 1px solid black;
+    border: 1px solid none;
     height: 100vh;
     width: 100vw;
     flex-direction: column;
@@ -174,4 +174,15 @@
 
 .user-border-2:hover {
     color: aqua;
+}
+
+.guest-border {
+    width: 100vw;
+    height: 30px;
+    background-color: gainsboro;
+    color: black;
+    display: flex;
+    justify-content: right;
+    padding-right: 30px;
+    padding-top: 30px;
 }

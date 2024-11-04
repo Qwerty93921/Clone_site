@@ -1,13 +1,13 @@
+from django.shortcuts import render, redirect, HttpResponse
 from http.client import responses
 from wsgiref.util import request_uri
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
-from django.shortcuts import render, redirect, HttpResponse
 from django.http import HttpResponse
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from .forms import RegisterForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, logout, authenticate
 from django.urls import resolve, Resolver404
 
 # Create your views here.
@@ -32,16 +32,18 @@ def about_viewer(request):
     return render(request, 'about.html', context={})
 
 
-def login_page_viewer(request):
-    return render(request, 'login.html', context={})
+# def login_page_viewer(request):
+#     return render(request, 'login.html', context={})
+
+
+# def logout_viewer(request):
+#     return render(request, 'logout.html', {'user' : User})
 
 
 def logout_viewer(request):
-    return render(request, 'logout.html', {'user' : User})
+    logout(request)
+    return redirect('login') # Выход на эту страницу после logout
 
-
-def user_profile_viewer(request):
-    return render(request, 'user_profile.html', {'user': User})
 # -------------------------------------------------------------------------
 
 # def register_page_viewer(request):
