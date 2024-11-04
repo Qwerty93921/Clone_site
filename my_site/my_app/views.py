@@ -4,11 +4,9 @@ from wsgiref.util import request_uri
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.http import HttpResponse
-from django.urls import path
-from django.contrib.auth import views as auth_views
+from django.urls import path, resolve, Resolver404
 from .forms import RegisterForm
-from django.contrib.auth import login, logout, authenticate
-from django.urls import resolve, Resolver404
+from django.contrib.auth import login, logout, authenticate, views as auth_views
 
 # Create your views here.
 
