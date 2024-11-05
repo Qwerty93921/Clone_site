@@ -11,7 +11,7 @@ from django.contrib.auth import login, logout, authenticate, views as auth_views
 # Create your views here.
 
 def base_page_viewer(request):
-    return render(request, 'index.html', context={})
+    return render(request, 'login.html', context={})
 
 
 def home(request):

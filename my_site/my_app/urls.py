@@ -24,7 +24,7 @@ from .views import (home, base_page_viewer, food_viewer, drinks_viewer, register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', base_page_viewer, name='index'),
+    path('', base_page_viewer, name='base'),
     path('home/', home, name='home'),
     path('food/', food_viewer, name='food'),
     path('drinks/', drinks_viewer, name='drinks'),
