@@ -30,7 +30,27 @@
             </div>
         </div>
 
-        <div class="text-border">Drinks page</div>
+        <div class="text-border">
+            <!-- text is here   -->
+        </div>
+
+        <div class="food-container-large">
+            <div class="food-container-top">Our drinks:</div>
+
+
+            <div class="food-container">
+                {% for drink in drinks %}
+                    <div class="food-text">{{ drink.title }}</div>
+                    <div class="food-text">{{ drink.description }}</div>
+                    <div class="food-text">{{ drink.price }}</div>
+                {% empty %}
+                    <div>No products available.</div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+
 
     </div>
 </body>

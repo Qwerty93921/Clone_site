@@ -186,3 +186,40 @@
     padding-right: 50px;
     padding-top: 30px;
 }
+
+.food-container-large {
+    border: 1px solid white;
+    height: 83%;
+    width: 95%;
+    background-color: none;
+    color: white;
+    margin-top: 20px;
+    margin-left: 35px;
+    padding-top: 20px;
+    padding-left: 25px;
+    font-size: x-large;
+}
+
+.food-container-top {
+    border: 1px solid none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: x-large;
+}
+
+.food-container {
+    border: 1px solid white;
+    height: 300px;
+    width: 400px;
+    color: white;
+    background-color: gainsboro;
+    font-size: x-large;
+}
+
+.food-text {
+    color: black;
+    margin-top: 10px;
+    margin-left: 15px;
+}

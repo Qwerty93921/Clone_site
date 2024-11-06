@@ -7,8 +7,8 @@ class Food(models.Model):
     title = models.CharField(max_length=50, null=False, blank=False)
     # img =
     description = models.TextField(null=True, blank=True)
-    price = models.DecimalField(null=False, blank=False, max_digits=10, decimal_places=2)
-    amount = models.DecimalField(null=False, blank=False, max_digits=20, decimal_places=0)
+    price = models.DecimalField(null=False, blank=False, max_digits=10, decimal_places=2, default=0)
+    amount_available = models.PositiveIntegerField(null=False, blank=False, default=0)
     # decimal_places = 2 - значит 2 цифры после запятой, ВСЕГО 10 цифр
 
     def __str__(self):
@@ -19,8 +19,8 @@ class Drink(models.Model):
     title = models.CharField(max_length=50, null=False, blank=False)
     # img =
     description = models.TextField(null=True, blank=True)
-    price = models.DecimalField(null=False, blank=False, max_digits=10, decimal_places=2)
-    amount = models.DecimalField(null=False, blank=False, max_digits=20, decimal_places=0)
+    price = models.DecimalField(null=False, blank=False, max_digits=10, decimal_places=2, default=0)
+    amount_available = models.PositiveIntegerField(null=False, blank=False, default=0)
 
     def __str__(self):
         return self.title

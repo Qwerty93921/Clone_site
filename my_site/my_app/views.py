@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from django.urls import path, resolve, Resolver404
 from .forms import RegisterForm
 from django.contrib.auth import login, logout, authenticate, views as auth_views
+from .models import Food, Drink
 
 # Create your views here.
 
@@ -19,11 +20,13 @@ def home(request):
 
 
 def food_viewer(request):
-    return render(request, 'food.html', context={})
+    foods = Food.objects.all() # Извлекаем все продукты из базы данных
+    return render(request, 'food.html', context={'foods' : foods})
 
 
 def drinks_viewer(request):
-    return render(request, 'drinks.html', context={})
+    drinks = Drink.objects.all()
+    return render(request, 'drinks.html', context={'drinks' : drinks})
 
 
 def about_viewer(request):
