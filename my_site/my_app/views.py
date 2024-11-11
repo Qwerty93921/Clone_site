@@ -1,3 +1,5 @@
+from lib2to3.fixes.fix_input import context
+
 from django.shortcuts import render, redirect, HttpResponse
 from http.client import responses
 from wsgiref.util import request_uri
@@ -44,6 +46,10 @@ def about_viewer(request):
 def logout_viewer(request):
     logout(request)
     return redirect('login') # Выход на эту страницу после logout
+
+
+def cart_viewer(request):
+    return render(request, 'cart.html', context={})
 
 # -------------------------------------------------------------------------
 

@@ -37,17 +37,32 @@
         <div class="food-container-large">
             <div class="food-container-top">Our drinks:</div>
 
+            <div class="food-container-big">
 
             <div class="food-container">
                 {% for drink in drinks %}
                     <div class="food-text">{{ drink.title }}</div>
                     <div class="food-text">{{ drink.description }}</div>
-                    <div class="food-text">{{ drink.price }}</div>
+                    <div class="food-text">{{ drink.price }}$</div>
+                    <button type="submit" class="button-add-to-cart">Add product to cart</button>
                 {% empty %}
-                    <div>No products available.</div>
+                    <div class="food-text">No products available.</div>
                 {% endfor %}
             </div>
 
+
+            <div class="food-container">
+                {% for drink in drinks %}
+                    <div class="food-text">{{ drink.title }}</div>
+                    <div class="food-text">{{ drink.description }}</div>
+                    <div class="food-text">{{ drink.price }}$</div>
+                    <button type="submit" class="button-add-to-cart">Add product to cart</button>
+                {% empty %}
+                    <div class="food-text">No products available.</div>
+                {% endfor %}
+            </div>
+
+            </div>
 
         </div>
 

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="{% static '/css/style1.css' %}">
+</head>
+<body>
+
+<div class="large-border">
+        <div class="top-border">
+            <div class="img-border-top"></div>
+            <nav class="button-container">
+                <a class="button-top" href="{% url 'home' %}">Home</a>
+                <a class="button-top" href="{% url 'food' %}">Food</a>
+                <a class="button-top" href="{% url 'drinks' %}">Drinks</a>
+                <a class="button-top" href="{% url 'about' %}">About us</a>
+
+                {% if user.is_authenticated %}
+                    <div class="user-border-2">You entered as {{ user.username }}</div>
+
+                    <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="button-top">Logout</button>
+                    </form>
+                {% else %}
+                    <a class="button-top" href="{% url 'login' %}">Login</a>
+                {% endif %}
+
+            </nav>
+        </div>
+
+        <h1 class="home-text-top">Welcome to cart page</h1>
+
+        <span class="text-border">
+            Text is here
+        </span>
+
+        <div class="cart-container">
+            <div class="cart-top">Your cart:</div>
+            <div class="cart-big">
+<!--                <div class="cart-big-top">Cart big top</div>-->
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
