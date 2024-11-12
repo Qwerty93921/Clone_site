@@ -12,10 +12,11 @@
         <div class="top-border">
             <div class="img-border-top"></div>
             <nav class="button-container">
-                <a class="button-top" href="{% url 'home' %}">Home</a>
-                <a class="button-top" href="{% url 'food' %}">Food</a>
-                <a class="button-top" href="{% url 'drinks' %}">Drinks</a>
-                <a class="button-top" href="{% url 'about' %}">About us</a>
+                <a class="home-icon" href="{% url 'home' %}">Home</a>
+                <a class="food-icon" href="{% url 'food' %}">Food</a>
+                <a class="drink-icon" href="{% url 'drinks' %}">Drinks</a>
+                <a class="about-icon" href="{% url 'about' %}">About us</a>
+                <a class="cart-icon" href="{% url 'cart' %}">Cart</a>
 
                 {% if user.is_authenticated %}
                     <div class="user-border-2">You entered as {{ user.username }}</div>
@@ -40,6 +41,17 @@
         <div class="cart-container">
             <div class="cart-top">Your cart:</div>
             <div class="cart-big">
+
+                {% if request.session.cart %}
+                    <ul>
+                        {% for item in request.session.cart %}
+                            <li>{{ item.title }} - {{ item.price }}$</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>Your cart is empty.</p>
+                {% endif %}
+
 <!--                <div class="cart-big-top">Cart big top</div>-->
 <!--                КЛАСС НЕ ИСПОЛЬЗОВАННЫЙ              -->
 

@@ -19,10 +19,9 @@ from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LogoutView
-from setuptools.extern import names
 
 from .views import (home, base_page_viewer, food_viewer, drinks_viewer, register_page_viewer,
-                    auth_views, about_viewer, logout_viewer, cart_viewer)
+                    auth_views, about_viewer, logout_viewer, cart_viewer, add_food_to_cart, add_drink_to_cart)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -43,5 +42,7 @@ urlpatterns = [
     # path('logout/', LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('logout/', logout_viewer, name='logout'),
     path('cart/', cart_viewer, name='cart'),
+    path('add_food_to_cart/<int:food_id>/', add_food_to_cart, name='add_food_to_cart'),
+    path('add_drink_to_cart/<int:drink_id>/', add_drink_to_cart, name='add_drink_to_cart'),
     # path('my_profile/', user_profile_viewer, name='profile_viewer'),
 ]

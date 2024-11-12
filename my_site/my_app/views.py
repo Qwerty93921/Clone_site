@@ -72,6 +72,17 @@ def cart_viewer(request):
 #
 #     return render(request, 'register.html', {'form': form})
 
+# -------------------------------------------------------------------------
+
+# def url_checker(request):
+#     try:
+#         # Проверяем, существует ли URL, соответствующий текущему запросу
+#         resolve(request.path)
+#     except Resolver404:
+#         return HttpResponse('Page does not exist')
+#     return None
+
+
 def register_page_viewer(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
@@ -101,10 +112,27 @@ def register_page_viewer(request):
     return render(request, 'register.html', {'form': form})
 
 
-# def url_checker(request):
-#     try:
-#         # Проверяем, существует ли URL, соответствующий текущему запросу
-#         resolve(request.path)
-#     except Resolver404:
-#         return HttpResponse('Page does not exist')
-#     return None
+def add_food_to_cart(request, food_id):
+    food_item = Food.objects.get(id=food_id)
+    cart = request.session.get('cart', [])
+
+    cart.append({
+        'id': food_item.id,
+        'title': food_item.title,
+        'price': round(float(food_item.price), 2) # Преобразуем Decimal в float
+    })
+    request.session['cart'] = cart
+
+    return redirect('cart')
+
+
+def add_drink_to_cart(request, drink_id):
+    drink_item = Drink.objects.get(id=drink_id)
+    cart = request.session.get('cart', [])
+    cart.append({
+        'id': drink_item.id,
+        'title': drink_item.title,
+        'price': round(float(drink_item.price), 2) # Преобразуем Decimal в float
+    })
+    request.session['cart'] = cart
+    return redirect('cart')
