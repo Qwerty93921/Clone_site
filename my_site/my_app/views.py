@@ -122,7 +122,6 @@ def add_food_to_cart(request, food_id):
         'price': round(float(food_item.price), 2) # Преобразуем Decimal в float
     })
     request.session['cart'] = cart
-
     return redirect('cart')
 
 
