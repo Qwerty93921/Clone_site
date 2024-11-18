@@ -146,6 +146,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
 
+# X_FRAME_OPTIONS = 'ALLOWALL'
+
 # -------------------------------------------------------------------------------------------------------
 
 # AUTH_USER_MODEL = 'my_app.User'  # Замените 'your_app' на имя вашего приложения
