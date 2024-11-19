@@ -5,7 +5,16 @@
     /* background-color: cadetblue; */
     background-image: url('/static/img/telegram_blue.jpg');
     background-size: cover;
-    
+    overflow: hidden;
+}
+
+    /* background: linear-gradient(to bottom, darkblue, #04c3ee); */
+    /* Градиент - это плавный переход цветов при скроле страницы */
+
+    /* #6dd5ed
+    Второй цвет изначальный
+    */
+
     /* 
     background-size: auto;
 
@@ -53,7 +62,6 @@
     Описание: Наследует значение background-size от родителя
 
     */
-}
 
 .top-border {
     border: 1px solid black;
@@ -425,4 +433,11 @@
 
 .about-icon:hover {
     color: aqua;
+}
+
+.iframe-border {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
