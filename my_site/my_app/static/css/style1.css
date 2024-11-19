@@ -6,6 +6,15 @@
     background-image: url('/static/img/telegram_blue.jpg');
     background-size: cover;
     overflow: hidden;
+
+    /* overflow:
+    visible(based), hidden, scroll, auto
+    
+    visible(Все что не вмещается в экран, оно будет показано снизу)
+    hidden - скрыто все что не вмешается
+    scroll - добавляет скролл если не вмещается содержимое
+    auto - само добавит скролл если он нужен
+    */
 }
 
     /* background: linear-gradient(to bottom, darkblue, #04c3ee); */
