@@ -122,7 +122,7 @@ def add_food_to_cart(request, food_id):
         'price': round(float(food_item.price), 2) # Преобразуем Decimal в float
     })
     request.session['cart'] = cart
-    return redirect('cart')
+    return redirect('food')
 
 
 def add_drink_to_cart(request, drink_id):
@@ -134,4 +134,8 @@ def add_drink_to_cart(request, drink_id):
         'price': round(float(drink_item.price), 2) # Преобразуем Decimal в float
     })
     request.session['cart'] = cart
-    return redirect('cart')
+    return redirect('drinks')
+
+def order_confirmation_viewer(request):
+    # функцию доделать
+    return redirect('order_conf')

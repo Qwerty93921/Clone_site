@@ -1,3 +1,38 @@
+/* ---------------------------------------------------------------------------- */
+/* Стилизация всей полосы прокрутки */
+/* полоска для прокрутки */
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+/* Стилизация ползунка (ползунок, полоска который передвигается) */
+/* Цвет ползунка */
+
+::-webkit-scrollbar-thumb {
+    background: darkcyan; 
+}
+
+/* ---------------------------------------------------------------------------- */
+
+/* Стилизация области скроллбара (задний фон) */
+::-webkit-scrollbar-track {
+    background-color: gainsboro;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+/* Цвет ползунка при наведении */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: red;
+}  */
+
+/* ---------------------------------------------------------------------------- */
+
+
 .large-border {
     border: 1px solid black;
     height: 150vh;
@@ -6,7 +41,7 @@
     background-image: url('/static/img/telegram_blue.jpg');
     background-size: cover;
     overflow: hidden;
-
+}
     /* overflow:
     visible(based), hidden, scroll, auto
     
@@ -15,8 +50,8 @@
     scroll - добавляет скролл если не вмещается содержимое
     auto - само добавит скролл если он нужен
     */
-}
 
+    
     /* background: linear-gradient(to bottom, darkblue, #04c3ee); */
     /* Градиент - это плавный переход цветов при скроле страницы */
 
@@ -124,6 +159,7 @@
     cursor: pointer;
     background-image: url('/static/img/telegram_purple.jpg');
     background-size: contain;
+    /* background: linear-gradient(to bottom, purple, rgb(81, 81, 233)); */
 }
 
 .button-top:hover {
@@ -138,8 +174,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gainsboro;
+    color: white;
+    /* background-color: gainsboro; */
+
+    /* background: linear-gradient(to bottom, purple, blueviolet); */
+    background: linear-gradient(to top, purple, blueviolet);
+
 }
+
+/* ---------------------------------------------------------------------------- */
 
 .do-not-have-account {
     margin-right: 30px;
@@ -197,8 +240,10 @@
 .guest-border {
     width: 100vw;
     height: 30px;
-    background-color: gainsboro;
-    color: black;
+    /* background-color: purple; */
+    background-color: blueviolet;
+    /* background: linear-gradient(to right, purple, blueviolet); */
+    color: white;
     display: flex;
     justify-content: right;
     padding-right: 50px;
@@ -285,7 +330,7 @@
 }
 
 .cart-container {
-    border: 1px solid white;
+    border: 1px solid none;
     height: 700px;
     width: 200px;
     color: white;
@@ -304,17 +349,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background: linear-gradient(to bottom, rgb(104, 6, 104), rgb(8, 171, 235)); */
+    /* top colour!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+        background: linear-gradient(to bottom, purple, rgb(81, 81, 233));
 }
 
 .cart-big {
     border: 1px solid white;
     /* 7px border---------------------------------------------- */
-    height: 87%;
+    height: 80%;
     width: 200px;
     color: white;
     padding-top: 10px;
     font-size: x-large;
-    background-color: purple;
+    /* background-color: purple; */
+    /* background: linear-gradient(to bottom, purple, rgb(69, 69, 230)); */
+    /* background: linear-gradient(to bottom, purple, rgb(81, 81, 233)); */
+    background: linear-gradient(to bottom, rgb(104, 6, 104), rgb(8, 171, 235));
     padding-left: 0px;
     display: flex;
     flex-direction: column;
@@ -330,6 +381,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cart-big-bottom {
+    border: 1px solid white;
+    height: 6%;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(104, 6, 104), rgb(8, 171, 235));
+}
+
+.button-make-order {
+    height: 70px;
+    width: 205px;
+    cursor: pointer;
+    font-size: x-large;
+    background-color: gainsboro;
+}
+
+.button-make-order:hover {
+    background-color: lightgreen;
 }
 
 .cart-icon {
