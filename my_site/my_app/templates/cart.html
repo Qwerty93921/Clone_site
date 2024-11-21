@@ -58,9 +58,9 @@
                 <span class="price-line"><strong>Total: {{ total_price }}$</strong></span>
             </div>
 
-            <form method="post" action="{% url 'order_conf' %}">
-                    {% csrf_token %}
-                    <button type="submit" onclick="showMessage()" class="button-make-order">Make order</button>
+            <form method="post" action="{% url 'payment_conf' %}">
+                {% csrf_token %}
+                <button type="submit" onclick="showMessage()" class="button-make-order">Make order</button>
             </form>
 
         </div>

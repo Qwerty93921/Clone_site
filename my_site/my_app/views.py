@@ -127,7 +127,7 @@ def add_drink_to_cart(request, drink_id):
     return redirect('drinks')
 
 
-def order_confirmation_viewer(request):
+def payment_confirmation_viewer(request):
     if request.method == 'POST':
         cart = request.session.get('cart', [])
         # Получаем данные из корзины (например, из сессии)
@@ -135,11 +135,11 @@ def order_confirmation_viewer(request):
         request.session['cart'] = cart
         # Сохраняем их для обработки на странице оплаты
 
-        return render(request, 'order_confirmation.html', {'cart': cart})
-    return HttpResponse('Error with method')
+        return render(request, 'payment_confirmation.html', {'cart': cart})
+    return HttpResponse('Error with method post')
 
 # --------------------------------------------------------------------------------------------------------
-# Не использованная функция
+# NOT USED
 
 def checkout(request):
     # Получаем данные из сессии
