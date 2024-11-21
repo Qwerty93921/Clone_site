@@ -385,7 +385,7 @@
 
 .cart-big-bottom {
     border: 1px solid white;
-    height: 6%;
+    height: 12%;
     width: 200px;
     display: flex;
     justify-content: center;
@@ -522,4 +522,12 @@
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.expire-input {
+    margin-left: 15px;
+}
+
+.cvv-input {
+    margin-left: 65px;
 }

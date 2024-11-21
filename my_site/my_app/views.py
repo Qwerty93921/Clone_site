@@ -1,11 +1,4 @@
-from lib2to3.fixes.fix_input import context
-
 from django.shortcuts import render, redirect, HttpResponse
-from http.client import responses
-from wsgiref.util import request_uri
-from django.contrib.auth.hashers import make_password
-from django.contrib.auth.models import User
-from django.http import HttpResponse
 from django.urls import path, resolve, Resolver404
 from .forms import RegisterForm
 from django.contrib.auth import login, logout, authenticate, views as auth_views
@@ -47,9 +40,6 @@ def logout_viewer(request):
     logout(request)
     return redirect('login') # Выход на эту страницу после logout
 
-
-def cart_viewer(request):
-    return render(request, 'cart.html', context={})
 
 # -------------------------------------------------------------------------
 
@@ -136,6 +126,33 @@ def add_drink_to_cart(request, drink_id):
     request.session['cart'] = cart
     return redirect('drinks')
 
+
 def order_confirmation_viewer(request):
-    # функцию доделать
-    return redirect('order_conf')
+    if request.method == 'POST':
+        cart = request.session.get('cart', [])
+        # Получаем данные из корзины (например, из сессии)
+
+        request.session['cart'] = cart
+        # Сохраняем их для обработки на странице оплаты
+
+        return render(request, 'order_confirmation.html', {'cart': cart})
+    return HttpResponse('Error with method')
+
+# --------------------------------------------------------------------------------------------------------
+# Не использованная функция
+
+def checkout(request):
+    # Получаем данные из сессии
+    cart = request.session.get('checkout_cart', [])
+    return render(request, 'checkout.html', {'cart': cart})
+# --------------------------------------------------------------------------------------------------------
+
+def cart_viewer(request):
+    cart = request.session.get('cart', [])
+    # total_price = round(float(sum(item['price'] for item in cart)), 2)
+    total_price = round(sum(item['price'] for item in cart), 2)
+    return render(request, 'cart.html', {'cart': cart, 'total_price': total_price})
+
+
+def payment_success_viewer(request):
+    return render(request, 'payment_success.html', context={})
