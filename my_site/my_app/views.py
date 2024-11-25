@@ -136,7 +136,8 @@ def payment_confirmation_viewer(request):
         # Сохраняем их для обработки на странице оплаты
 
         return render(request, 'payment_confirmation.html', {'cart': cart})
-    return HttpResponse('Error with method post')
+    else:
+        return HttpResponse('Error with method post')
 
 # --------------------------------------------------------------------------------------------------------
 # NOT USED

@@ -310,7 +310,7 @@
 }
 
 .home-text-top {
-    border: 1px solid white;
+    border: 0px solid white;
     margin-top: 20px;
     margin-left: 35px;
     color: white;
@@ -538,4 +538,51 @@
 
 .payment-top {
     margin-bottom: 20px;
+}
+
+.pay-container {
+    border: 1px solid none;
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+}
+
+.pay-success {
+    border: 1px solid white;
+    height: 400px;
+    width: 700px;
+    color: white;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    padding-left: 70px;
+
+    background: linear-gradient(to bottom, lightgreen, deepskyblue);
+    /* good */
+    
+    /* background: linear-gradient(to bottom, lightgreen, rgb(7, 175, 7)); */
+    /* green */
+
+    /* background: linear-gradient(to bottom, lightgreen, cyan); */
+    /* too light */
+
+    /* background: linear-gradient(to bottom, lightgreen, rgb(8, 171, 235)); */
+    /* lightblue bottom(good) */
+
+    /* background: linear-gradient(to bottom, lightgreen, rgb(30, 129, 168)); */
+    /* darkblue bottom(no) */
+
+    /* background-color: rgb(30, 129, 168); */
+    /* darkcyan, aquamarine, darkturquoise, deepskyblue, dodgerblue, rgb(8, 171, 235), rgb(30, 129, 168) */
+}
+
+.link-here {
+    position: relative;
+    right: 400px;
+    top: 18px;
 }

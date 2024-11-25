@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About us</title>
+    <title>Successful payment</title>
   <link rel="stylesheet" href="{% static '/css/style1.css' %}">
 </head>
 <body>
@@ -31,7 +31,14 @@
         </div>
 
         <div class="text-border">
-            ASDASDASASDADSADSADSADSADS
+            Successful payment page
+        </div>
+
+        <div class="pay-container">
+            <div class="pay-success">
+                Thank you for order user {{ user.username }}, wait your order.
+                Check our other products <a href="{% url 'home' %}" class="link-here">here</a>
+            </div>
         </div>
 
     </div>
