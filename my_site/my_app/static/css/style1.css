@@ -559,9 +559,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+
     font-size: xx-large;
     padding-left: 70px;
-
+    padding-right: 70px;
+    /* flex-direction: column; */
+    
     background: linear-gradient(to bottom, lightgreen, deepskyblue);
     /* good */
     
@@ -581,8 +585,8 @@
     /* darkcyan, aquamarine, darkturquoise, deepskyblue, dodgerblue, rgb(8, 171, 235), rgb(30, 129, 168) */
 }
 
-/* .link-here {
-    position: relative;
-    right: 400px;
-    top: 18px;
-} */
+.link-here {
+    display: inline;
+    /* text-decoration: none; */
+    /* Убирает подчеркивание ссылки */
+}

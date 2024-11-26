@@ -38,7 +38,9 @@
 
         <div class="pay-container">
             <div class="pay-success">
-                Thank you for order user {{ user.username }}, wait your order.
+                <span>Thank you for order user {{ user.username }}, wait your order. You can go to home page
+                    <a href="{% url 'home' %}" class="link-here">here</a>
+                </span>
             </div>
         </div>
 
