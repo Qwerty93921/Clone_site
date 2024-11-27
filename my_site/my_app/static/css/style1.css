@@ -41,7 +41,9 @@
     background-image: url('/static/img/telegram_blue.jpg');
     background-size: cover;
     overflow: hidden;
+    color: white;
 }
+
     /* overflow:
     visible(based), hidden, scroll, auto
     
@@ -314,6 +316,7 @@
     margin-top: 20px;
     margin-left: 35px;
     color: white;
+    font-size: 50px;
 }
 
 .button-add-to-cart {
@@ -522,6 +525,8 @@
 }
 
 .iframe-border {
+    /* border: 8px solid white;
+    background-color: purple; */
     display: flex;
     justify-content: center;
     margin-top: 30px;
@@ -589,4 +594,26 @@
     display: inline;
     /* text-decoration: none; */
     /* Убирает подчеркивание ссылки */
+}
+
+.link-container {
+    /* border: 8px solid white; */
+    height: 60px;
+    width: 95%;
+}
+
+.link-text {
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.link-text:hover {
+    color: aqua;
+}
+
+.link-container-2 {
+    /* border: 1px solid white; */
+    height: 130px;
+    width: 95%;
 }
