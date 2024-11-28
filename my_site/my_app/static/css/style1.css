@@ -257,6 +257,7 @@
 }
 
 .food-container-large {
+    /* border: 1px solid white; */
     border: 1px solid white;
     height: 90%;
     width: 95%;
@@ -267,6 +268,7 @@
     padding-top: 20px;
     padding-left: 25px;
     font-size: x-large;
+    /* background-color: purple; */
 }
 
 .food-container-top {
@@ -277,15 +279,15 @@
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .food-container-big {
+    /* border: 1px solid yellow; */
     border: 1px solid none;
     height: 100%;
     width: 100%;
     margin-top: 20px;
-    background-color: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
