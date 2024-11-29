@@ -63,6 +63,13 @@
                 <button type="submit" onclick="showMessage()" class="button-make-order">Make order</button>
             </form>
 
+
+            <form method="post" action="{% url 'clear_cart' %}">
+                {% csrf_token %}
+                <button type="submit" class="button-make-order">Clear cart</button>
+            </form>
+
+
         </div>
 
     </div>

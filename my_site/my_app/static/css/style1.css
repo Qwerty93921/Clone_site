@@ -360,7 +360,7 @@
     align-items: center;
     /* background: linear-gradient(to bottom, rgb(104, 6, 104), rgb(8, 171, 235)); */
     /* top colour!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-        background: linear-gradient(to bottom, purple, rgb(81, 81, 233));
+    background: linear-gradient(to bottom, purple, rgb(81, 81, 233));
 }
 
 .cart-big {

@@ -1,3 +1,4 @@
+from Tools.scripts.make_ctype import method
 from django.shortcuts import render, redirect, HttpResponse
 from django.urls import path, resolve, Resolver404
 from .forms import RegisterForm
@@ -142,10 +143,11 @@ def payment_confirmation_viewer(request):
 # --------------------------------------------------------------------------------------------------------
 # NOT USED
 
-def checkout(request):
-    # Получаем данные из сессии
-    cart = request.session.get('checkout_cart', [])
-    return render(request, 'checkout.html', {'cart': cart})
+# def checkout(request):
+#     # Получаем данные из сессии
+#     cart = request.session.get('checkout_cart', [])
+#     return render(request, 'checkout.html', {'cart': cart})
+
 # --------------------------------------------------------------------------------------------------------
 
 def cart_viewer(request):
@@ -153,6 +155,16 @@ def cart_viewer(request):
     # total_price = round(float(sum(item['price'] for item in cart)), 2)
     total_price = round(sum(item['price'] for item in cart), 2)
     return render(request, 'cart.html', {'cart': cart, 'total_price': total_price})
+
+
+def clear_cart(request):
+    if request.method == 'POST':
+        request.session['cart'] = []
+        # Обновляем сессию
+        request.session.modified = True
+        return redirect('cart')
+    else:
+        return HttpResponse('Method is not POST')
 
 
 def payment_success_viewer(request):

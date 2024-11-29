@@ -22,7 +22,7 @@ from django.contrib.auth.views import LogoutView
 
 from .views import (home, base_page_viewer, food_viewer, drinks_viewer, register_page_viewer,
                     auth_views, about_viewer, logout_viewer, cart_viewer, add_food_to_cart, add_drink_to_cart,
-                    payment_confirmation_viewer, payment_success_viewer)
+                    payment_confirmation_viewer, payment_success_viewer, clear_cart)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -47,5 +47,6 @@ urlpatterns = [
     path('payment_conf/', payment_confirmation_viewer, name='payment_conf'),
     # path('my_profile/', user_profile_viewer, name='profile_viewer'),
     path('cart/', cart_viewer, name='cart'),
+    path('clear_cart/', clear_cart, name='clear_cart'),
     path('payment_success/', payment_success_viewer, name='payment_success'),
 ]
