@@ -9,8 +9,12 @@
 <body>
 
 <div class="large-border">
-        <div class="top-border">
-            <div class="img-border-top"></div>
+        <nav class="top-border">
+
+            <a href="{% url 'home' %}">
+                <div class="img-border-top"></div>
+            </a>
+
             <nav class="button-container">
                 <a class="home-icon" href="{% url 'home' %}">Home</a>
                 <a class="food-icon" href="{% url 'food' %}">Food</a>
@@ -30,7 +34,7 @@
                 {% endif %}
 
             </nav>
-        </div>
+        </nav>
 
         <h1 class="home-text-top">Welcome to cart page</h1>
 

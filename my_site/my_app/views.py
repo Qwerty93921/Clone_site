@@ -1,4 +1,3 @@
-from Tools.scripts.make_ctype import method
 from django.shortcuts import render, redirect, HttpResponse
 from django.urls import path, resolve, Resolver404
 from .forms import RegisterForm
