@@ -407,11 +407,29 @@
     width: 205px;
     cursor: pointer;
     font-size: x-large;
-    background-color: gainsboro;
+    color: white;
+    /* background-color: gainsboro; */
+    background: linear-gradient(to bottom, rgb(104, 6, 104), rgb(8, 171, 235));
 }
 
 .button-make-order:hover {
-    background-color: lightgreen;
+    background: lightgreen;
+    color: black;
+}
+
+.clear-button {
+    height: 70px;
+    width: 205px;
+    cursor: pointer;
+    font-size: x-large;
+    color: white;
+    /* background-color: gainsboro; */
+    background: linear-gradient(to bottom, rgb(104, 6, 104), rgb(8, 171, 235));
+}
+
+.clear-button:hover {
+    color: white;
+    background: red;
 }
 
 .cart-icon {
